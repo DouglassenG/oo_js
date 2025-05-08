@@ -1,25 +1,17 @@
-function Cachorro(nome) {
+function Animal(nome, racaEspecie, peso) {
     this.nome = nome;
-    this.latir = function() {
-        console.log(this.nome + " latiu para ele.");
-    }
-}
-
-function Gato(nome, raca, peso) {
-    this.raca = raca;
+    this.racaEspecie = racaEspecie;
     this.peso = peso;
-    
-    Cachorro.call(this, nome);
 }
 
-const cachorro1 = new Cachorro("Tito");
-const gato1 = new Gato("Mel", "Siamês", "4kg");
-const gato2 = new Gato("Lili", "Persa", "3kg");
-cachorro1.latir();
+const cachorro = new Animal("Tito", "Pastor-alemão", "23kg");
+const gato = new Animal("Mel", "Siamês", "4kg");
+const ave = new Animal("Kikito", "Calopsita", "0.5kg");
 
-console.log(cachorro1);
-console.log(gato1);
-console.log(gato2);
+
+console.log(cachorro);
+console.log(gato);
+console.log(ave);
 
 
 
