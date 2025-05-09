@@ -1,13 +1,24 @@
-function Animal(nome, racaEspecie, peso) {
+function Animal(nome, raca, peso) {
     this.nome = nome;
-    this.racaEspecie = racaEspecie;
+    this.raca = raca;
     this.peso = peso;
 }
 
-const cachorro = new Animal("Tito", "Pastor-alemão", "23kg");
-const gato = new Animal("Mel", "Siamês", "4kg");
-const ave = new Animal("Kikito", "Calopsita", "0.5kg");
+function Cachorro(nome, raca, peso) {
+    Animal.call(this, nome, raca, peso);
+}
 
+function Gato(nome, raca, peso) {
+    Animal.call(this, nome, raca, peso);
+}
+
+function Ave(nome, raca, peso) {
+    Animal.call(this, nome, raca, peso);
+}
+
+const cachorro = new Cachorro("Tito", "Pastor-alemão", "23kg");
+const gato = new Gato("Mel", "Siamês", "4kg");
+const ave = new Ave("Kikito", "Calopsita", "0.2kg");
 
 console.log(cachorro);
 console.log(gato);
